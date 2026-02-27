@@ -1,0 +1,8 @@
+**/node_modules
+**/dist
+**/.cache
+**/.mf-types
+**/.DS_Store
+
+.env
+.env.*
