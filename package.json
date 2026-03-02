@@ -1,0 +1,13 @@
+{
+  "name": "keycloak-mfe-mf",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Microfrontends - shell (3000) - users-list (3001) - users-form (3002)",
+  "scripts": {
+    "dev": "concurrently -n shell,users-list,users-form -c auto \"npm --prefix shell run start\" \"npm --prefix users-list run start\" \"npm --prefix users-form run start\"",
+    "build": "concurrently \"npm --prefix shell run build\" \"npm --prefix users-list run build\" \"npm --prefix users-form run build\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
