@@ -12,6 +12,7 @@ type Props = {
     api: {
         listUsers: (token: string) => Promise<KCUser[]>;
         deleteUser: (token: string, userId: string) => Promise<void>;
+        updateUser: (token: string, userId: string, payload: any) => Promise<void>;
     };
 };
 export default function UsersList({ token, api, refreshKey }: Props): import("react/jsx-runtime").JSX.Element;
