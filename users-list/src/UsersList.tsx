@@ -113,7 +113,6 @@ export default function UsersList({ token, api, refreshKey = 0 }: Props) {
   // Load on token/refresh
   useEffect(() => {
     load();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token, refreshKey]);
 
   // ESC to close modal
@@ -123,7 +122,6 @@ export default function UsersList({ token, api, refreshKey = 0 }: Props) {
     }
     if (editing) window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [editing]);
 
   const filteredUsers = useMemo(() => {
@@ -166,7 +164,6 @@ export default function UsersList({ token, api, refreshKey = 0 }: Props) {
               {token ? "Token listo" : "Esperando token"}
             </span>
 
-            {/* (Si quieres quitar este botón, bórralo y listo) */}
             <button
               onClick={load}
               disabled={!token || loading}
@@ -346,7 +343,7 @@ export default function UsersList({ token, api, refreshKey = 0 }: Props) {
         </div>
 
         {/* Footer info */}
-        <div className="mt-3 text-xs text-slate-500">
+        <div className="mt-3 text-xs text-slate-500 mt-4">
           Tip: usa el buscador para filtrar por username, nombre o email.
         </div>
       </div>

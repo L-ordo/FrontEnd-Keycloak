@@ -38,7 +38,7 @@ export default function UserForm({ token, api, onChanged }: Props) {
           {
             type: "password",
             value: password,
-            temporary: false, // siempre permanente
+            temporary: false, 
           },
         ],
       };
